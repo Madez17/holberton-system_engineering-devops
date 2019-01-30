@@ -1,2 +1,2 @@
 #!/bin/bash
-chown --form=betty:holberton
+chown -form=betty:holberton
