@@ -1,2 +1,2 @@
 #!/bin/bash
-PATH=$PATH find . -mindepth 1 -type d -printf . | wc -l
+PATH=$PATH find -type d -printf '\n' | wc -l
