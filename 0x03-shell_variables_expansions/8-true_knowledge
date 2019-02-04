@@ -1,2 +1,2 @@
 #!/bin/basH
-$TRUEKNOWLEDGE=TRUEKNOWLEDGE + 128 | cat -e 
+echo $((TRUEKNOWLEDGE+=128))
