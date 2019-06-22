@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script is displaying the content of the current directory after the first dash is displayed
+save="$(ls)"; for f in $save; do echo "$f" | cut -f2 -d-; done
