@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+for ((word=1; word<=10; word++))
+do
+	echo "Holberton School"
+done
