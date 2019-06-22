@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+word=1
+while [ $word -le 10 ]
+do
+	((word++))
+	if [ "$word" -eq 5 ]; then
+		echo "bad luck"
+	elif [ "$word" -eq 9 ]; then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+done
