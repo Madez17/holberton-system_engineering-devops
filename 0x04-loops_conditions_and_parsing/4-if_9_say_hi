@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+word=1
+while [ $word -le 9 ]
+do
+	echo "Holberton School"
+	((word++))
+	if [[ "$word" == '9' ]]; then
+		echo "Hi"
+	fi
+done
