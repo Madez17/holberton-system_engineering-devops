@@ -1,1 +1,4 @@
 #!/usr/bin/env bash
+# receiving a SIGTERM signal and trap the signal
+trap 'echo "I am invincible!!!"' SIGTERM
+while : True; do echo "To infinity and beyond"; sleep 2; done
