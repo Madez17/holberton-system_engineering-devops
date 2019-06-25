@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+# Kill process and kill sig
+kill -9 "$(pgrep -f "7-highlander")"
