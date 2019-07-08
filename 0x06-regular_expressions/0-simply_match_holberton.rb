@@ -1,2 +1,2 @@
 #!/usr/bin/env ruby
-if text.match(/Holberton/)
+puts ARGV[0].scan(/Holberton/).join
