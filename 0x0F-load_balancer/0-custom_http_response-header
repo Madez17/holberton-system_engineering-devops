@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 # script that custom HTTP response header to input $HOSTNAME
 # shellcheck disable=SC2154
-sudo sed -i "36i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo sed -i "30i \\\trewrite ^/redirect_me https://www.youtube.com/watch?v=SK9KEwE6JmE permanent;" /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/error_404.html
+sudo sed -i "30i \\\terror_page 404 /error_404.html;\n\tlocation = /error_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default
+ sed -i "36i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-available/default
 sudo service nginx restart
