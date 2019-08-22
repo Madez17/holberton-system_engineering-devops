@@ -4,7 +4,7 @@
 list="www lb-01 web-01 web-02"
 
 if [ "$#" -eq "2" ]; then
-    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | grep madez | awk '{print "The subdomain " $1 " is a " $4 " record and points to " $5}'
+    dig "$2.$1" | grep -A1 'ANSWER SECTION:' | grep madez | awk '{split($1,a,"."); print "The subdomain " a[1] " is a " $4 " record and points to " $5}'
 
 else
     for i in $list; do
