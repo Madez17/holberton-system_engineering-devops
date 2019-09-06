@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # Scrip that create a backup that all databases and create a compress file
-mysqldump -u root -p"$1" --all-databases > backup.sql, tar fzcv "$( date '+%d-%m-%Y')".tar.gz backup.sql
+mysqldump -u root -p"$1" --all-databases > backup.sql
+tar fzcv "$( date '+%d-%m-%Y')".tar.gz backup.sql
