@@ -2,7 +2,6 @@
 """ Queries the Reddit API and returns the number of subscribers """
 import requests
 from sys import argv
-import json
 
 
 def number_of_subscribers(subreddit):
@@ -13,8 +12,7 @@ def number_of_subscribers(subreddit):
                        allow_redirects=False)
 
     if API.status_code == 200:
-        req = json.loads(API.text)     
+        req = API.json()
         return (req.get('data').get('subscribers'))
     else:
         return 0
-
