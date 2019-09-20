@@ -7,8 +7,8 @@ import json
 
 def number_of_subscribers(subreddit):
     user_agent = 'Madez'
-    API = requests.get('https://www.reddit.com/r/{}/about.json'
-                       .format(argv[1]),
+    API = requests.get('https://www.reddit.com/r/' +
+                       subreddit + '/hot.json?limit=10',
                        headers={'User-Agent': user_agent},
                        allow_redirects=False)
 
