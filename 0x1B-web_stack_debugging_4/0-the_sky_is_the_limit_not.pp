@@ -4,6 +4,6 @@ exec { 'replace_unlimit':
   path    => ['usr/bin', 'usr/sbin', '/bin'],
 }
 exec { 'restart-nginx':
-  command => "sudo service nginx restart",
+  command => 'sudo service nginx restart',
   path    => ['/usr/bin', '/usr/sbin']
 }
